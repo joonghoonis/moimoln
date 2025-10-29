@@ -1,0 +1,174 @@
+@charset "UTF-8";
+#wrap {
+  background-color: green;
+}
+#wrap .top_banner {
+  background: #000;
+  color: #fff;
+  font-size: 0.813rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  position: relative;
+}
+#wrap .top_banner .close_btn {
+  position: absolute;
+  right: 10px;
+}
+#wrap header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 30px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  justify-content: space-between;
+}
+#wrap header .left_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 50px;
+}
+#wrap header .left_menu li a {
+  color: #fff;
+  font-size: 500;
+}
+#wrap header .right_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 35px;
+}
+#wrap header .right_menu .language .lang_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#wrap header .right_menu li {
+  color: #fff;
+  font-size: 500;
+}
+#wrap main #main_view { /* ==========================메인뷰 레이아웃============= */ }
+#wrap main #main_view .swiper-wrapper .slide1 {
+  height: 95vh;
+  background-image: url(/images/main_slide_1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#wrap main #main_view .swiper-wrapper .slide1 .text {
+  position: absolute;
+  bottom: 300px;
+  left: 230px;
+}
+#wrap main #main_view .swiper-wrapper .slide1 .text p {
+  color: #fff;
+  font-size: 1.625rem;
+}
+#wrap main #main_view .swiper-wrapper .slide1 .text h2 {
+  line-height: 140%;
+  letter-spacing: -2%;
+  color: #fff;
+  font-size: 2.5rem;
+}
+#wrap main #main_view .swiper-wrapper .slide1 .text h2 em {
+  font-weight: 700;
+}
+#wrap main #main_view .swiper-wrapper .silde2 { /* 임시 */
+  height: 95vh;
+  background-image: url(/images/lookbook3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#wrap main #main_view {
+  /* sweipr pagination */
+}
+#wrap main #main_view .swiper-pagination {
+  padding: 25px;
+}
+#wrap main #main_view .swiper-pagination .swiper-pagination-bullet {
+  background: #ddd;
+}
+#wrap main #main_view .swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+}
+#wrap main #new_arrivals { /* ==========================new arrivals 레이아웃============= */
+  padding: 70px 0;
+}
+#wrap main #new_arrivals .title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+#wrap main #new_arrivals .title h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+#wrap main #new_arrivals .title p {
+  font-size: 0.875rem;
+  color: #999;
+}
+#wrap main #new_arrivals .product_category { /* 상품 카테고리 */
+  padding: 40px 0 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+#wrap main #new_arrivals .product_category .top_list, #wrap main #new_arrivals .product_category .bottom_list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#wrap main #new_arrivals .product_category .top_list span, #wrap main #new_arrivals .product_category .bottom_list span {
+  color: #999;
+}
+#wrap main #new_arrivals .product_category .top_list span em, #wrap main #new_arrivals .product_category .bottom_list span em { /* 카테고리 활성화 -> 포인트 컬러  */
+  color: #FD4802;
+  position: relative;
+}
+#wrap main #new_arrivals .product_category .top_list span em::before, #wrap main #new_arrivals .product_category .bottom_list span em::before { /* 카테고리 활성화 점 */
+  content: "";
+  width: 3px;
+  height: 3px;
+  display: block;
+  background: #FD4802;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -3px;
+}
+#wrap main #new_arrivals .new_product {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#wrap main #new_arrivals .new_product .product a {
+  width: 315px;
+  height: 380px;
+  display: block;
+}
+#wrap main #new_arrivals .new_product .product a img {
+  width: 100%;
+  height: 100%;
+}
+#wrap main #new_arrivals .new_product .product .product_info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
