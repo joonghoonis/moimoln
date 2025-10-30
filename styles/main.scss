@@ -46,7 +46,7 @@
             padding:40px 0 30px; 
             .top_list,.bottom_list{
                 @include flex-row; @include flex-center;gap:50px;
-                span {
+                button {
                     color:$color-gray;
                     em { /* 카테고리 활성화 -> 포인트 컬러  */
                         color:$color-point;
@@ -252,6 +252,11 @@
             .title{margin-bottom:50px;}
             .acc_list {
                 @include flex-row; gap:20px;
+                a {
+                    img {
+                        width:100%;
+                    }
+                }
                 .acc_hover_view{ /* ===========공통===== */
                     position:absolute; top:10px;  right:10px;opacity: 0;
                 }
@@ -292,7 +297,7 @@
                     h2 {font-size:$font-size-22;font-weight: $font-weight-medium;}
                     @include flex-col;@include flex-center;gap:10px;
                     .col_hashtag {
-                        @include flex-row; gap:3px;
+                        @include flex-row; gap:15px;
                         p {font-size:$font-size-14;color:$color-gray}
                     }
                     a {
@@ -317,10 +322,11 @@
             }
             #insta_swiper {
                 position:relative;
+                padding-bottom: 30px;
                 .swiper-wrapper {
                     .swiper-slide{
                         @include flex-col; gap:10px;
-                        width:400px; height:625px;
+                        width:400px;
                         a {
                             img {width:100%;}
                         }

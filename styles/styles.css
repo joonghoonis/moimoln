@@ -82,14 +82,14 @@
   align-items: center;
   gap: 50px;
 }
-#wrap main .product_category .top_list span, #wrap main .product_category .bottom_list span {
+#wrap main .product_category .top_list button, #wrap main .product_category .bottom_list button {
   color: #999;
 }
-#wrap main .product_category .top_list span em, #wrap main .product_category .bottom_list span em { /* 카테고리 활성화 -> 포인트 컬러  */
+#wrap main .product_category .top_list button em, #wrap main .product_category .bottom_list button em { /* 카테고리 활성화 -> 포인트 컬러  */
   color: #FD4802;
   position: relative;
 }
-#wrap main .product_category .top_list span em::before, #wrap main .product_category .bottom_list span em::before { /* 카테고리 활성화 점 */
+#wrap main .product_category .top_list button em::before, #wrap main .product_category .bottom_list button em::before { /* 카테고리 활성화 점 */
   content: "";
   width: 3px;
   height: 3px;
@@ -375,6 +375,9 @@
   flex-flow: row nowrap;
   gap: 20px;
 }
+#wrap main #acc .acc_list a img {
+  width: 100%;
+}
 #wrap main #acc .acc_list .acc_hover_view { /* ===========공통===== */
   position: absolute;
   top: 10px;
@@ -442,7 +445,7 @@
 #wrap main #special_collection .col_main .col .col_hashtag {
   display: flex;
   flex-flow: row nowrap;
-  gap: 3px;
+  gap: 15px;
 }
 #wrap main #special_collection .col_main .col .col_hashtag p {
   font-size: 0.875rem;
@@ -469,13 +472,13 @@
 }
 #wrap main #instagram #insta_swiper {
   position: relative;
+  padding-bottom: 30px;
 }
 #wrap main #instagram #insta_swiper .swiper-wrapper .swiper-slide {
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
   width: 400px;
-  height: 625px;
 }
 #wrap main #instagram #insta_swiper .swiper-wrapper .swiper-slide a img {
   width: 100%;
