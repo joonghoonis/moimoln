@@ -1,9 +1,7 @@
 @use './common.scss' as *;
 @use './responsive.scss';
 
-body {}
 #wrap {
-    background-color: green;
     .top_banner {
         background:#000; color: #fff; font-size: $font-size-13;
         @include flex-row; @include flex-center;
@@ -31,6 +29,47 @@ body {}
         }
     }
     main {
+        /*========================공통====================================== */
+        .title {/* ======================제목(전체)=================== */
+            @include flex-col; @include flex-center; gap: 15px;
+            h1 {
+                font-size: $font-size-40;
+                font-weight: $font-weight-semi;
+            }
+            p {
+                font-size: $font-size-14;
+                color: $color-gray;
+            }
+        }
+        .product_category { /* =====================상품 카테고리(new,best)=============== */
+            @include flex-col; gap: 20px; position: relative; 
+            padding:40px 0 30px; 
+            .top_list,.bottom_list{
+                @include flex-row; @include flex-center;gap:50px;
+                span {
+                    color:$color-gray;
+                    em { /* 카테고리 활성화 -> 포인트 컬러  */
+                        color:$color-point;
+                        position: relative;
+                        &::before { /* 카테고리 활성화 점 */
+                            content:''; width:3px; height:3px; display: block;
+                            background: $color-point;position: absolute; 
+                            left: 50%;transform: translate(-50%);
+                            top: -3px;
+                        }
+                    }
+                }
+            }
+        }
+        .product {
+            position: relative;
+            .product_like {
+                top:20px; right: 20px;
+                position: absolute;
+                width:30px; height: 30px;
+                img {width:100%}
+            }
+        }
         #main_view { /* ==========================메인뷰 레이아웃============= */
             .swiper-wrapper {
                 .slide1 {
@@ -60,63 +99,296 @@ body {}
             .swiper-pagination .swiper-pagination-bullet-active {background: #fff; }
         }
         #new_arrivals {/* ==========================new arrivals 레이아웃============= */
-            padding: 70px 0;
-            .title {
-                @include flex-col; @include flex-center; gap: 15px;
-                h1 {
-                    font-size: $font-size-40;
-                    font-weight: $font-weight-semi;
-                }
-                p {
-                    font-size: $font-size-14;
-                    color: $color-gray;
+            padding: 70px 15.75%;
+            .product_category{
+                .view_more{
+                    @include view_more;
                 }
             }
-            .product_category { /* 상품 카테고리 */
-                padding:40px 0 30px; 
-                @include flex-col; gap: 20px;
-                .top_list,.bottom_list{
-                    @include flex-row; @include flex-center;gap:50px;
-                    span {
-                        color:$color-gray;
-                        em { /* 카테고리 활성화 -> 포인트 컬러  */
-                            color:$color-point;
-                            position: relative;
-                            &::before { /* 카테고리 활성화 점 */
-                                content:''; width:3px; height:3px; display: block;
-                                background: $color-point;position: absolute; 
-                                left: 50%;transform: translate(-50%);
-                                top: -3px;
+            #new_product {
+                .swiper-wrapper{
+                    .product {
+                        width: 315px;
+                        position: relative;                        
+                        a {
+                            img {
+                                width:100%;
                             }
                         }
-                    }
-                }
-                .top_list{}
-                .bottom_list {}
-            }
-            
-            .new_product {
-                @include flex-row; @include flex-center; gap:20px;
-                .product {
-                    a {
-                        width:315px; height: 380px;display:block;
-                        img {
-                            width:100%; height: 100%;
+                        .product_like {
+                            position:absolute; top:20px;right: 20px;
                         }
-                    }
-                    .product_info {
-                        @include flex-col; @include flex-center;
+                        .product_info {
+                            @include flex-col; @include flex-center; gap: 15px;
+                            padding-top:15px ;
+                            .product_name { font-size: $font-size-15; }
+                            .product_price_color{
+                                @include flex-col; @include flex-center;gap:10px;
+                                .product_price {
+                                    font-size: $font-size-15; font-weight: $font-weight-medium;
+                                }
+                                .color_list{
+                                    @include flex-row; @include flex-center;gap:8px;
+                                    .color {
+                                        @include colorbg;
+                                    }
+                                }
+                            }
+                        }       
                     }
                 }
-                .product1 {}
+                .product1 {
+                    .color1 {background-color: #FFF4D4;}
+                    .color2 {background-color: #EB3E8D;}
+                }
+                .product2 {
+                    .color1 {background-color: #00A1E9}
+                    .color2 {background-color: #FFF4D4;}
+                }
+                .product3 {
+                    .color1{background-color: #5E0010;}
+                    .color2{background-color: #665B09;}
+                    .color3{background-color: #EB3E8D;}
+                }
+                .product4 {
+                    .color1{background-color: #6A6C6E;}
+                    .color2{background-color: #FFF4D4;}
+                }
             }
         }
         #banner {}
-        #best_sellers {}
-        #look_book {}
-        #acc {}
-        #special_collection {}
-        #instagram {}
+        #best_sellers {
+            padding: 70px 15.75%;
+            .product_category {
+                .view_more {
+                    @include view_more; 
+                }
+            }
+            .best_product {
+                @include flex-row; justify-content: space-between; gap:20px;
+                .view_card {
+                    position: relative;
+                    a {
+                        width:420px;height:738px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .hover_view {
+                        position: absolute; top:50px;opacity: 0;
+                    }
+                }
+                .right_best_product{
+                    @include flex-col; justify-content: space-between; gap:20px;
+                        .product{  /*=========공통================== */
+                        a {
+                            width: 280px; height: 280px;
+                            img {
+                                width:100%;
+                            }
+                        }
+                        .info {
+                            @include flex-col; gap:10px;
+                            .name {font-size:$font-size-14;}
+                            .price{
+                                font-weight: $font-weight-medium;
+                                font-size:$font-size-15;
+                                em {color:$color-point;}
+                                span {
+                                    font-size:$font-size-14;
+                                    font-weight: $font-weight-ragular;
+                                }
+                            }
+                            .color_list {
+                                @include flex-row; gap:8px;
+                            }
+                            .color{
+                                @include colorbg;
+                            }
+                        }
+                    }
+                    .top_best_product,.bottom_best_product {
+                        @include flex-row; gap:20px;
+                    }
+                    .product1 {
+                        .color1{background-color: #EB3E8D;}
+                        .color2{background-color: #FFF4D4;}
+                    }
+                    .product2 {
+                        .color1{background-color: #B7B4CC;}
+                    }
+                    .product3 {
+                        .color1{background-color: #66B0A3;}
+                    }
+                    .product4 {
+                        .color1{background-color: #FFFDD2;}
+                    }
+                    .product5 {
+                        .color1{background-color: #964B00;}
+                    }
+                    .product6 {
+                        .color1{background-color: #EAD874;}
+                    }
+                }
+            }
+        }
+        #look_book {
+            padding: 70px 0;
+            background-color: #FAF1E0;
+            .title {margin-bottom:50px ;}
+            #look_book_swiper {
+                width:100%;
+                .swiper-wrapper {
+                    transition-timing-function: linear !important; // 자연스럽게
+                    .swiper-slide {
+                        width:220px;height:300px;
+                        img { width: 100%;}
+                    }
+                }
+            }
+        }
+        #acc {
+            padding: 70px 15.75%;
+            .title{margin-bottom:50px;}
+            .acc_list {
+                @include flex-row; gap:20px;
+                .acc_hover_view{ /* ===========공통===== */
+                    position:absolute; top:10px;  right:10px;opacity: 0;
+                }
+                .acc_left{
+                    @include flex-col; gap:20px;
+                    .acc_left_product1,.acc_left_product2{
+                        position:relative;    
+                    }
+                }
+                .acc_center{
+                    @include flex-col; gap:20px;
+                    .acc_center_product1,.acc_center_product2,.acc_center_product3{
+                        position: relative;
+                    }
+                    .acc_center_top {
+                        @include flex-row; gap:20px
+                    }
+                }
+                .acc_right {
+                    @include flex-col; gap:20px;
+                    .acc_right_product1,.acc_right_product2,.acc_right_product3{
+                        position: relative;
+                    }
+                    .acc_right_bottom {
+                        @include flex-row; gap:20px
+                    }
+                }
+            }
+        }
+        #special_collection {
+            padding: 70px 10.1%;
+            .title {
+                margin-bottom:50px;
+            }
+            .col_main {
+                @include flex-row;@include flex-center; gap:40px;
+                .col {
+                    h2 {font-size:$font-size-22;font-weight: $font-weight-medium;}
+                    @include flex-col;@include flex-center;gap:10px;
+                    .col_hashtag {
+                        @include flex-row; gap:3px;
+                        p {font-size:$font-size-14;color:$color-gray}
+                    }
+                    a {
+                        img {
+                            width:100%
+                        }
+                    }
+                }
+            }
+        }
+        #instagram {
+            padding: 70px 6.38% ;
+            .title {
+                margin-bottom:50px;
+                .title_insta_icon {
+                    @include flex-row;
+                    .insta_icon {
+                        width:40px;
+                        img {width:100%}
+                    }
+                }
+            }
+            #insta_swiper {
+                position:relative;
+                .swiper-wrapper {
+                    .swiper-slide{
+                        @include flex-col; gap:10px;
+                        width:400px; height:625px;
+                        a {
+                            img {width:100%;}
+                        }
+                        .insta_hashtag{
+                            @include flex-row; gap:7px;padding:0 10px;
+                            p {color:$color-dark-gray}
+                        }
+                    }
+                }
+                .swiper-scrollbar{
+                    position: absolute; left:0; bottom:0;
+                    width:100%;
+                } 
+            }
+        }
     }
-    footer {}
+    footer {
+        @include flex-row; justify-content: space-between;
+        padding:40px 6.25%;background:#222 ;
+        .footer_left {
+            @include flex-col; gap:20px;
+            .footer_left_top {
+                @include flex-row;gap:20px; align-items: center;
+                color:$color-white; font-size:$font-size-14;
+                p:nth-last-of-type(2),p:nth-last-of-type(4){
+                    color:$color-gray
+                }
+            }   
+            .footer_left_bottom {
+                @include flex-row; gap:5px; position: relative;
+                >p {color:$color-white;font-size:$font-size-12;position:absolute; right:-30px}
+                .company {
+                    p {font-size:$font-size-14; color:$color-white}
+                    .company_btn_click{
+                        display: none;
+                        margin-top:5px; line-height: 140%; font-size:$font-size-12;
+                        &.active {display:block;}
+                    }
+                }
+            }
+        }
+        .footer_right {
+            @include flex-row; gap:80px;
+            dt {font-size:$font-size-14}
+            dd {font-size:$font-size-12}
+            .footer_app{
+                @include flex-col; gap:15px;
+                color:$color-white;
+                dd {
+                    width:70px;height:70px;
+                    img{width:100%}
+                }
+            }
+            .footer_cs{
+                @include flex-col; gap:15px;
+                dd {line-height: 150%;}
+                color:$color-white;
+            }
+            .footer_content_us{
+                @include flex-col; gap:15px;
+                color:$color-white;
+                .content_info {
+                    @include flex-col; gap:10px;
+                    .sns_icon {
+                        @include flex-row; gap:10px;
+                    }
+                }
+            }
+        }
+    }
 }
