@@ -79,52 +79,85 @@
                         <span>SPACESUIT</span>
                         <span>SET</span>
                     </div>
+                    <button type="button" class="view_more">
+                        더보기<img src="./images/plus.png" alt="">
+                    </button>
                 </div>  
-                <div class="view_more">
-                    <p>더보기<img src="./images/plus.png" alt=""></p>
-                </div>
-                <div class="new_product"> 
-                    <div class="product product1">
-                        <a href="#"><img src="./images/new_product1.jpg" alt=""></a>
-                        <button type="button"><img src="./images/favorite_view.png" alt=""></button>
-                        <div class="product_info">
-                            <p>SOFT&비바 기모 티셔츠</p>
-                            <p>25,000원</p>
-                            <span class="color1"></span>
-                            <span class="color2"></span>
+                <div class="swiper" id="new_product">
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide product product1">
+                            <a href="#"><img src="./images/new_product1.jpg" alt=""></a>
+                            <button type="button" class="product_like"><img src="./images/favorite_view.png" alt="찜하기"></button>
+                            <div class="product_info">
+                                <p class="product_name">SOFT&비바 기모 티셔츠</p>
+                                <div class="product_price_color">
+                                    <p class="product_price">25,000원</p>
+                                    <div class="color_list">
+                                        <span class="color color1"></span>
+                                        <span class="color color2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product product2">
+                            <a href="#"><img src="./images/new_product2.jpg" alt=""></a>
+                            <button type="button" class="product_like"><img src="./images/favorite_view.png" alt="찜하기"></button>
+                            <div class="product_info">
+                                <p class="product_name">캣츠 기모 맨투맨 티셔츠</p>
+                                <div class="product_price_color">
+                                    <p class="product_price">35,000원</p>
+                                    <div class="color_list">
+                                        <span class="color color1"></span>
+                                        <span class="color color2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product product3">
+                            <a href="#"><img src="./images/new_product3.jpg" alt=""></a>
+                            <button type="button" class="product_like"><img src="./images/favorite_view.png" alt="찜하기"></button>
+                            <div class="product_info">
+                                <p class="product_name">SOFT&엘마 티셔츠</p>
+                                <div class="product_price_color">
+                                    <p class="product_price">27,300원</p>
+                                    <div class="color_list">
+                                        <span class="color color1"></span>
+                                        <span class="color color2"></span>
+                                        <span class="color color3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product product4">
+                            <a href="#"><img src="./images/new_product4.jpg" alt=""></a>
+                            <button type="button" class="product_like"><img src="./images/favorite_view.png" alt="찜하기"></button>
+                            <div class="product_info">
+                                <p class="product_name">SOFT&언발롱티셔츠</p>
+                                <div class="product_price_color">
+                                    <p class="product_price">29,000원</p>
+                                    <div class="color_list">
+                                        <span class="color color1"></span>
+                                        <span class="color color2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product product4"> <!-- --------------------------임시 -->
+                            <a href="#"><img src="./images/new_product4.jpg" alt=""></a>
+                            <button type="button" class="product_like"><img src="./images/favorite_view.png" alt="찜하기"></button>
+                            <div class="product_info">
+                                <p class="product_name">SOFT&언발롱티셔츠</p>
+                                <div class="product_price_color">
+                                    <p class="product_price">29,000원</p>
+                                    <div class="color_list">
+                                        <span class="color color1"></span>
+                                        <span class="color color2"></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product product2">
-                        <a href="#"><img src="./images/new_product2.jpg" alt=""></a>
-                        <button type="button"><img src="./images/favorite_view.png" alt=""></button>
-                        <div class="product_info">
-                            <p>캣츠 기모 맨투맨 티셔츠</p>
-                            <p>35,000원</p>
-                            <span class="color1"></span>
-                            <span class="color2"></span>
-                        </div>
-                    </div>
-                    <div class="product product3">
-                        <a href="#"><img src="./images/new_product3.jpg" alt=""></a>
-                        <button type="button"><img src="./images/favorite_view.png" alt=""></button>
-                        <div class="product_info">
-                            <p>SOFT&엘마 티셔츠</p>
-                            <p>27,300원</p>
-                            <span class="color1"></span>
-                            <span class="color2"></span>
-                            <span class="color3"></span>
-                        </div>
-                    </div>
-                    <div class="product product4">
-                        <a href="#"><img src="./images/new_product4.jpg" alt=""></a>
-                        <button type="button"><img src="./images/favorite_view.png" alt=""></button>
-                        <div class="product_info">
-                            <p>SOFT&언발롱티셔츠</p>
-                            <p>29,000원</p>
-                            <span class="color1"></span>
-                            <span class="color2"></span>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>       
                 </div>
             </div>
             <div id="banner"> <!-- ------------------------------------배너---------- -->
@@ -150,14 +183,14 @@
                         <span>SPACESUIT</span>
                         <span>SET</span>
                     </div>
+                    <button type="button" class="view_more">
+                        더보기 <img src="./images/plus.png" alt="">
+                    </button>
                 </div>  
-                <div class="view_more">
-                    <p>더보기 <img src="./images/plus.png" alt=""></p>
-                </div>
                 <div class="best_product">
-                    <div class="view_card"> <!-- --------------- left view product------------ -->
+                    <div class="product view_card"> <!-- --------------- left view product------------ -->
                         <a href="#"><img src="./images/best_view_product.jpg" alt=""></a>
-                        <button type="button"><img src="./images/favorite_view.png" alt=""></button>
+                        <button type="button" class="product_like"><img src="./images/favorite_view.png" alt=""></button>
                         <div class="hover_view">
                             <div class="top">
                                 <span class="color1"></span>
@@ -174,61 +207,61 @@
                         <div class="top_best_product"> <!-- -------------------------best right 1행--------------- -->
                             <div class="product product1">
                                 <a href="#"><img src="./images/best_product1.jpg" alt=""></a>
-                                <button type="button"><img src="./images/favorite_view.png" alt=""></button>
+                                <button type="button" class="product_like"><img src="./images/favorite_view.png" alt=""></button>
                                 <div class="info">
                                     <p class="name">슬로 패딩 점퍼</p>
                                     <p class="price"><em>30%</em> 76,300원 <span>109,000원</span></p>
-                                    <div class="color">
-                                        <span class="color1"></span>
-                                        <span class="color2"></span>
+                                    <div class="color_list">
+                                        <span class="color color1"></span>
+                                        <span class="color color2"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="product product2">
                                 <a href="#"><img src="./images/best_product2.jpg" alt=""></a>
-                                <button type="button"><img src="./images/favorite_view.png" alt=""></button>
+                                <button type="button" class="product_like"><img src="./images/favorite_view.png" alt=""></button>
                                 <div class="info">
                                     <p class="name">라엘 리버시블 패딩 점퍼</p>
                                     <p class="price"><em>25%</em> 74,250원 <span>99,000원</span></p>
-                                    <span class="color1"></span>
+                                    <span class="color color1"></span>
                                 </div>
                             </div>
                             <div class="product product3">
                                 <a href="#"><img src="./images/best_product3.jpg" alt=""></a>
-                                <button type="button"><img src="./images/favorite_view.png" alt=""></button>
+                                <button type="button" class="product_like"><img src="./images/favorite_view.png" alt=""></button>
                                 <div class="info">
                                     <p class="name">데릭 리버시블 패딩 점퍼</p>
                                     <p class="price"><em>30%</em> 48,300원 <span>69,000원</span></p>
-                                    <span class="color1"></span>
+                                    <span class="color color1"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="bottom_best_product"> <!-- -----------------------best right 2행----------- -->
                             <div class="product product4">
                                 <a href="#"><img src="./images/best_product4.jpg" alt=""></a>
-                                <button type="button"><img src="./images/favorite_view.png" alt=""></button>
+                                <button type="button" class="product_like"><img src="./images/favorite_view.png" alt=""></button>
                                 <div class="info">
                                     <p class="name">홀리데이 플리스 점퍼</p>
                                     <p class="price"><em>30%</em> 62,300원 <span>89,000원</span></p>
-                                    <span class="color1"></span>
+                                    <span class="color color1"></span>
                                 </div>
                             </div>
                             <div class="product product5">
                                 <a href="#"><img src="./images/best_product5.jpg" alt=""></a>
-                                <button type="button"><img src="./images/favorite_view.png" alt=""></button>
+                                <button type="button" class="product_like"><img src="./images/favorite_view.png" alt=""></button>
                                 <div class="info">
                                     <p class="name">라오 리버시블 경량 패딩 점퍼</p>
                                     <p class="price"><em>30%</em> 69,300원 <span>99,000원</span></p>
-                                    <span class="color1"></span>
+                                    <span class="color color1"></span>
                                 </div>
                             </div>
                             <div class="product product6">
                                 <a href="#"><img src="./images/best_product6.jpg" alt=""></a>
-                                <button type="button"><img src="./images/favorite_view.png" alt=""></button>
+                                <button type="button" class="product_like"><img src="./images/favorite_view.png" alt=""></button>
                                 <div class="info">
                                     <p class="name">럽 미퍼 코트</p>
                                     <p class="price"><em>30%</em> 69,300원 <span>99,000원</span></p>
-                                    <span class="color1"></span>
+                                    <span class="color color1"></span>
                                 </div>
                             </div>
                         </div>
@@ -240,15 +273,25 @@
                     <h1>LOOK BOOK</h1>
                     <p>2025 F/W 시즌 룩을 한곳에 담았습니다</p>
                 </div>
-                <div class="look_book_img">
-                    <img src="./images/lookbook1.jpg" alt="">
-                    <img src="./images/lookbook2.jpg" alt="">
-                    <img src="./images/lookbook3.jpg" alt="">
-                    <img src="./images/lookbook4.jpg" alt="">
-                    <img src="./images/lookbook5.jpg" alt="">
-                    <img src="./images/lookbook6.jpg" alt="">
-                    <img src="./images/lookbook7.jpg" alt="">
-                    <img src="./images/lookbook8.jpg" alt="">
+                <div class="swiper" id="look_book_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1"><img src="./images/lookbook1.jpg" alt=""></div>
+                        <div class="swiper-slide slide2"><img src="./images/lookbook2.jpg" alt=""></div>
+                        <div class="swiper-slide slide3"><img src="./images/lookbook3.jpg" alt=""></div>
+                        <div class="swiper-slide slide4"><img src="./images/lookbook4.jpg" alt=""></div>
+                        <div class="swiper-slide slide5"><img src="./images/lookbook5.jpg" alt=""></div>
+                        <div class="swiper-slide slide6"><img src="./images/lookbook6.jpg" alt=""></div>
+                        <div class="swiper-slide slide7"><img src="./images/lookbook7.jpg" alt=""></div>
+                        <div class="swiper-slide slide8"><img src="./images/lookbook8.jpg" alt=""></div>
+                        <div class="swiper-slide slide10"><img src="./images/lookbook1.jpg" alt=""></div>
+                        <div class="swiper-slide slide11"><img src="./images/lookbook2.jpg" alt=""></div>
+                        <div class="swiper-slide slide12"><img src="./images/lookbook3.jpg" alt=""></div>
+                        <div class="swiper-slide slide13"><img src="./images/lookbook4.jpg" alt=""></div>
+                        <div class="swiper-slide slide14"><img src="./images/lookbook5.jpg" alt=""></div>
+                        <div class="swiper-slide slide15"><img src="./images/lookbook6.jpg" alt=""></div>
+                        <div class="swiper-slide slide16"><img src="./images/lookbook7.jpg" alt=""></div>
+                        <div class="swiper-slide slide16"><img src="./images/lookbook8.jpg" alt=""></div>
+                    </div>
                 </div>
             </div>
             <div id="acc"> <!-- --------------------------------ACC---------------- -->
@@ -256,85 +299,87 @@
                     <h1>ACC</h1>
                     <p>데일리룩에 감각을 더하는 키즈 액세서리</p>
                 </div>
-                <div class="acc_left"> <!-- acc 왼쪽 -->
-                    <div class="acc_left_prodcut1">
-                        <a href="#"><img src="./images/acc_left1.jpg" alt=""></a>
-                        <div class="acc_hover_view">
-                            <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                            <h2>베디티디 플리스 머플러</h2>
-                            <p>69,000원</p>
-                        </div>
-                    </div>
-                    <div class="acc_left_prodcut2">
-                        <a href="#"><img src="./images/acc_left2.jpg" alt=""></a>
-                        <div class="acc_hover_view">
-                            <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                            <h2>미니모이 헤이티 아일렛 손싸개</h2>
-                            <p>9,000원</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="acc_center"> <!-- acc가운데 -->
-                    <div class="acc_center_top"> <!-- acc가운데 위 -->
-                        <div class="acc_center_prodcut1">
-                            <a href="#"><img src="./images/acc_center1.jpg" alt=""></a>
+                <div class="acc_list">
+                    <div class="acc_left"> <!-- acc 왼쪽 -->
+                        <div class="acc_left_product1">
+                            <a href="#"><img src="./images/acc_left1.jpg" alt=""></a>
                             <div class="acc_hover_view">
                                 <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                                <h2>키오베레모</h2>
+                                <h2>베디티디 플리스 머플러</h2>
+                                <p>69,000원</p>
+                            </div>
+                        </div>
+                        <div class="acc_left_product2">
+                            <a href="#"><img src="./images/acc_left2.jpg" alt=""></a>
+                            <div class="acc_hover_view">
+                                <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
+                                <h2>미니모이 헤이티 아일렛 손싸개</h2>
+                                <p>9,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acc_center"> <!-- acc가운데 -->
+                        <div class="acc_center_top"> <!-- acc가운데 위 -->
+                            <div class="acc_center_product1">
+                                <a href="#"><img src="./images/acc_center1.jpg" alt=""></a>
+                                <div class="acc_hover_view">
+                                    <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
+                                    <h2>키오베레모</h2>
+                                    <p>39,000원</p>
+                                </div>
+                            </div>
+                            <div class="acc_center_product2">
+                                <a href="#"><img src="./images/acc_center2.jpg" alt=""></a>
+                                <div class="acc_hover_view">
+                                    <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
+                                    <h2>무스베어방한모</h2>
+                                    <p>49,000원</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="acc_center_product3">
+                            <a href="#"><img src="./images/acc_center3.jpg" alt=""></a>
+                            <div class="acc_hover_view">
+                                <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
+                                <h2>토비미아 방지 배낭</h2>
+                                <p><em>40%</em> 23,800원 <span>40,000원</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="acc_right"> <!-- acc오른쪽 -->
+                        <div class="acc_right_product1">
+                            <a href="#"><img src="./images/acc_right1.jpg" alt=""></a>
+                            <div class="acc_hover_view">
+                                <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
+                                <h2>코코팜 크로스백</h2>
                                 <p>39,000원</p>
                             </div>
                         </div>
-                        <div class="acc_center_prodcut2">
-                            <a href="#"><img src="./images/acc_center2.jpg" alt=""></a>
-                            <div class="acc_hover_view">
-                                <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                                <h2>무스베어방한모</h2>
-                                <p>49,000원</p>
+                        <div class="acc_right_bottom"> <!-- acc오른쪽 밑 -->
+                            <div class="acc_right_product2">
+                                <a href="#"><img src="./images/acc_right2.jpg" alt=""></a>
+                                <div class="acc_hover_view">
+                                    <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
+                                    <h2>리보니니트바라클라바</h2>
+                                    <p>39,000원</p>
+                                </div>
+                            </div>
+                            <div class="acc_right_product3">
+                                <a href="#"><img src="./images/acc_right3.jpg" alt=""></a>
+                                <div class="acc_hover_view">
+                                    <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
+                                    <h2>럽미니트헤어스카프</h2>
+                                    <p>19,000원</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="acc_center_prodcut3">
-                        <a href="#"><img src="./images/acc_center3.jpg" alt=""></a>
-                        <div class="acc_hover_view">
-                            <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                            <h2>토비미아 방지 배낭</h2>
-                            <p><em>40%</em> 23,800원 <span>40,000원</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="acc_right"> <!-- acc오른쪽 -->
-                    <div class="acc_right_prodcut1">
-                        <a href="#"><img src="./images/acc_right1.jpg" alt=""></a>
-                        <div class="acc_hover_view">
-                            <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                            <h2>코코팜 크로스백</h2>
-                            <p>39,000원</p>
-                        </div>
-                    </div>
-                    <div class="acc_right_bottom"> <!-- acc오른쪽 밑 -->
-                        <div class="acc_right_prodcut2">
-                            <a href="#"><img src="./images/acc_right2.jpg" alt=""></a>
-                            <div class="acc_hover_view">
-                                <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                                <h2>리보니니트바라클라바</h2>
-                                <p>39,000원</p>
-                            </div>
-                        </div>
-                        <div class="acc_right_prodcut3">
-                            <a href="#"><img src="./images/acc_righ3.jpg" alt=""></a>
-                            <div class="acc_hover_view">
-                                <button type="button"><img src="./images/favorite_hover.png" alt=""></button>
-                                <h2>럽미니트헤어스카프</h2>
-                                <p>19,000원</p>
-                            </div>
-                        </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
             <div id="special_collection"> <!-- ----------------------------special colleciton---------------------  -->
                 <div class="title">
                     <h1>Special Collection</h1>
-                    <p>사랑을 담은 특벼한 기획전</p>
+                    <p>사랑을 담은 특별한 기획전</p>
                 </div>
                 <div class="col_main">
                     <div class="col col_1">
@@ -367,40 +412,82 @@
             </div>
             <div id="instagram">
                 <div class="title">
-                    <h1>INSTAGRAM <img src="./images/instagram_icon.png" alt=""></h1>
-                    <p>moimoln</p>
-                </div>
-                <div class="insta_1">
-                    <a href="#"><img src="/images/instagram_1.jpg" alt=""></a>
-                    <div class="insta_hashtag">
-                        <p>#moimoln</p>
-                        <p>#Knit</p>
-                        <p>#cat</p>
+                    <div class="title_insta_icon">
+                        <h1>INSTAGRAM</h1>
+                        <div class="insta_icon">
+                            <img src="./images/instagram_icon.png" alt="">
+                        </div>
                     </div>
+                    <p>@moimoln</p>
                 </div>
-                <div class="insta_2">
-                    <a href="#"><img src="/images/instagram_2.jpg" alt=""></a>
-                    <div class="insta_hashtag">
-                        <p>#moimoln</p>
-                        <p>#Windbreaker</p>
-                        <p>#cherry</p>
+                <div class="swiper" id="insta_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <a href="#"><img src="/images/instagram_1.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Knit</p>
+                                <p>#cat</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <a href="#"><img src="/images/instagram_2.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Windbreaker</p>
+                                <p>#cherry</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <a href="#"><img src="/images/instagram_3.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Snow_Suit</p>
+                                <p>#cherry</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide4">
+                            <a href="#"><img src="/images/instagram_4.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Windbraker</p>
+                                <p>#flower</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide5">
+                            <a href="#"><img src="/images/instagram_1.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Windbraker</p>
+                                <p>#flower</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide6">
+                            <a href="#"><img src="/images/instagram_2.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Windbraker</p>
+                                <p>#flower</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide7">
+                            <a href="#"><img src="/images/instagram_3.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Windbraker</p>
+                                <p>#flower</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide8">
+                            <a href="#"><img src="/images/instagram_4.jpg" alt=""></a>
+                            <div class="insta_hashtag">
+                                <p>#moimoln</p>
+                                <p>#Windbraker</p>
+                                <p>#flower</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="insta_3">
-                    <a href="#"><img src="/images/instagram_3.jpg" alt=""></a>
-                    <div class="insta_hashtag">
-                        <p>#moimoln</p>
-                        <p>#Snow_Suit</p>
-                        <p>#cherry</p>
-                    </div>
-                </div>
-                <div class="insta_4">
-                    <a href="#"><img src="/images/instagram_4.jpg" alt=""></a>
-                    <div class="insta_hashtag">
-                        <p>#moimoln</p>
-                        <p>#Windbraker</p>
-                        <p>#flower</p>
-                    </div>
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </main>
@@ -415,11 +502,13 @@
                     <p>개인정보처리방침</p>
                 </div>
                 <div class="footer_left_bottom">
-                    <div class="company_btn">
-                        <p>스타일이십사 주식회사 <button type="button"><img src="/images/arrow_down_nofill.png" alt=""></button></p>
-                        <p class="company_btn_click">대표이사 : 임동환, 김지원 주소: 서울시 강남구 논현로 633, 6층 (논현동, 한세엠케이빌딩) <br>
-                            사업자등록번호: 116-81-32499 통신판매업 신고번호: 제 2024-서울강남-04239 <button type="button">사업자정보확인</button> <br>
-                            개인정보보호책임자 : 배기영 호스팅 서비스사업자 : 스타일이십사(주)</p>
+                    <div class="company">
+                        <p>스타일이십사 주식회사 <button type="button" class="company_btn"><img src="/images/arrow_down_nofill.png" alt=""></button></p>
+                        <p class="company_btn_click">
+                            대표이사 : 임동환, 김지원 주소: 서울시 강남구 논현로 633, 6층 (논현동, 한세엠케이빌딩) <br>
+                            사업자등록번호: 116-81-32499 통신판매업 신고번호: 제 2024-서울강남-04239 <br>
+                            개인정보보호책임자 : 배기영 호스팅 서비스사업자 : 스타일이십사(주)
+                        </p>
                     </div>
                     <p>COPYRIGHT&copy;2021. STYLE24 ALL RIGHTS RESERVED.</p>
                 </div>
@@ -427,7 +516,7 @@
             <div class="footer_right">
                 <dl class="footer_app">
                     <dt>APP</dt>
-                    <dd><img src="#" alt=""></dd>
+                    <dd><img src="/images/kakao_qr_code.jpg" alt=""></dd>
                 </dl>
                 <dl class="footer_cs">
                     <dt>CS</dt>
@@ -435,9 +524,13 @@
                 </dl>
                 <dl class="footer_content_us">
                     <dt>CONTENT US</dt>
-                    <dd>help@style24.com</dd>
-                    <dd><button type="button"><img src="./images/footer_kakaotalk.png" alt=""></button></dd>
-                    <dd><button type="button"><img src="./images/footer_instagram.png" alt=""></button></dd>
+                    <div class="content_info">
+                        <dd>help@style24.com</dd>
+                        <div class="sns_icon">
+                            <dd><button type="button"><img src="./images/footer_kakaotalk.png" alt=""></button></dd>
+                            <dd><button type="button"><img src="./images/footer_instagram.png" alt=""></button></dd>
+                        </div>
+                    </div>
                 </dl>
             </div>
         </footer>
